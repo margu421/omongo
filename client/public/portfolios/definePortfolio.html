@@ -1,0 +1,24 @@
+<div class="row panel panel-default">
+    <div class="col-md-7 panel-body">
+        <form name="">
+            <table class="table table-striped">
+                <thead>
+                <th><input type="checkbox" ng-model="vm.checkedAll" ng-click="vm.checkAll()"></th>
+                <th>Account number</th>
+                <th>Account type</th>
+                <th>Included in</th>
+                <th>Cancel date</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="account in vm.accounts">
+                    <td><input type="checkbox" ng-selected="selected" ng-model="account.selected"></td>
+                    <td>{{account.accountNumber}}</td>
+                    <td>{{account.accountType}}</td>
+                    <td><a href="" title="Included in" data-content="">Included in...</a></td>
+                    <td>{{account.cancelDate}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>

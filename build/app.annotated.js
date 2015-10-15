@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("app",["ui.router","highcharts-ng","app.portfolios","app.listPortfolios","app.routes","app.core"])}();

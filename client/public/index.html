@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Omongo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body ng-app="app">
+<!--Top nav -->
+
+<nav class="row navbar navbar-default ">
+    <div class="container">
+        <div class="col-md-8 navbar-brand" ui-sref="home">
+            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+            <span>Omongo</span>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="instruments">Instruments</a></li>
+                <li><a ui-sref="portfolios">Portfolios</a></li>
+                <li><a ui-sref="instrument">Instrument</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+    </nav>
+
+<!--Main -->
+<div id="main" class="container">
+    <ui-view ></ui-view>
+</div>
+
+<!-- Page footer, eftersom den är utanför main-diven finns den hela tiden-->
+<footer class="text-center">
+    <p><a href=""></a></p>
+</footer>
+
+</body>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Eget skit-->
+<script src="app.js"></script>
+
+<script src="routes/routes.module.js"></script>
+<script src="routes/routes.js"></script>
+<script src="portfolios/portfolios.module.js"></script>
+<script src="portfolios/editPortfolio.js"></script>
+<script src="portfolios/listPortfolios.js"></script>
+<script src="portfolios/definePortfolio.js"></script>
+<script src="instruments/instrument.module.js"></script>
+<script src="instruments/instrument.js"></script>
+<script src="instruments/listInstruments.js"></script>
+
+<!--<script src="blocks/logger/logger.module.js"></script>
+<script src="blocks/logger/logger.js"></script>
+
+<script src="blocks/exception/exception.module.js"></script>
+<script src="blocks/exception/exception.js"></script>
+
+-->
+<script src="core/core.module.js"></script>
+<script src="core/dataservice.js" charset="utf-8"></script>
+
+<!--Highchart stuff-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="3rdparty/highcharts-ng.js"></script>
+</html>

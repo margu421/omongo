@@ -1,0 +1,1 @@
+!function(){"use strict";function n(n){function r(r){return function(t){n.error(r,t)}}var t={catcher:r};return t}angular.module("blocks.exception").factory("exception",n),n.$inject=["logger"]}();

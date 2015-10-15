@@ -1,0 +1,62 @@
+<div class="panel panel-default container">
+    <h4>{{vm.portfolio.portfolioOwnerName}}<small>  ({{vm.portfolio._id}})</small></h4>
+
+    <div class="panel-body">
+    <!--Rad nr 1-->
+    <div class="row">
+        <form ng-submit="">
+        <div class="form-group col-sm-5">
+            <label for="portfolioName">Portfolio</label>
+            <div class="input-group">
+                <input id="portfolioName" type="text" class="form-control" ng-model="vm.portfolio.portfolioName" placeholder="Portfolio name">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="nameEditEnabled=!nameEditEnabled">
+                    <span class="glyphicon glyphicon-pencil"></span></button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-5 -->
+
+
+        <div class="col-sm-3">
+            <label for="portfolioType">Type</label>
+            <select id="portfolioType" ng-model="vm.portfolio.portfolioType" class="form-control">
+                <option>Standard</option>
+                <option>Custom</option>
+                <option>Special</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 input-group">
+            <submit id="savePortfolio" class="btn btn-success pull-right" ng-click="vm.savePortfolio(vm.portfolio)">Save</submit>
+        </div>
+        </form>
+    </div>
+
+        <!--Rad nr 2-->
+    <div class="row">
+        <div class="form-group col-md-8">
+            <h3>Holdings</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <th><input type="checkbox" ng-model="vm.checkedAll" ng-click="vm.checkAll()"></th>
+                    <th>Instrument</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Market value</th>
+                    <th><button ui-sref="addHoldings" class="btn btn-xs pull-right"><span class="glyphicon glyphicon-plus-sign"/> Add</button></th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="holding in vm.portfolio.holdings">
+                        <td><input type="checkbox" ng-selected="selected" ng-model="account.selected"></td>
+                        <td>{{position.instrument}}</td>
+                        <td>{{position.quantity}}</td>
+                        <td>{{position.price}}</td>
+                        <td>{{position.marketvalue}}</td>
+                        <td>{{position.marketvalue}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+    </div>
+</div>

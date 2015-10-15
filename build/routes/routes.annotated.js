@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("app.routes").config(["$stateProvider","$urlRouterProvider",function(o,t){t.otherwise("/"),o.state("list",{url:"/",controller:"listPortfolios",controllerAs:"vm",templateUrl:"listPortfolios/listPortfolios.html"}).state("define",{url:"/define",controller:"definePortfolio",controllerAs:"vm",templateUrl:"portfolios/portfolios.html"})}])}();

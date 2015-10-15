@@ -1,0 +1,17 @@
+{
+  "boss":      true,
+  "node":      true,
+  "eqeqeq":    true,
+  "strict":    true,
+  "newcap":    false,
+  "undef":     true,
+  "unused":    true,
+  "onecase":   true,
+  "lastsemic": true,
+  "validthis": true,
+
+  "globals": {
+    "angular": false,
+    "$": false
+  }
+}

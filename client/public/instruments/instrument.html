@@ -1,0 +1,42 @@
+
+<div class="row panel panel-default">
+    <div class="col-sm-3 panel-body">
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="instrumentkey" placeholder="Find instrument" ng-keyup="($event.which === 13 || $event.which === 32) && vm.getInstrument(instrumentkey)" >
+                <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="vm.getInstrument(instrumentkey)" type="button">Go!</button>
+
+                </span>
+        </div><!-- /input-group -->
+
+    </div>
+    <div class="col-sm-9 panel-body">
+        <p class="instrumentdescription">{{vm.instrument.dataset.description}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3 panel panel-default">
+        <table class="table table-hover table-condensed">
+            <thead>
+            <tr>
+                <th>{{vm.instrument.dataset.column_names[0]}}</th>
+                <th>{{vm.instrument.dataset.column_names[4]}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in vm.chartConfig.series[0].data track by $index">
+                <td>{{row[0] | date: 'yyyy-MM-dd' }}</td>
+                <td>{{row[1] | number: 2}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-8 panel panel-default">
+        <highchart id="chart1" config="vm.chartConfig"></highchart>
+
+
+
+    </div>
+</div>

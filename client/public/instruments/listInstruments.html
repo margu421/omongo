@@ -1,0 +1,52 @@
+
+<div class="row panel panel-default">
+    <div class="panel-body">
+        <div class="col-sm-4">
+            <div class="input-group">
+                <span class="input-group-addon"><select ng-init="vm.selectedMarket = vm.markets[0]" ng-model="vm.selectedMarket" ng-options="market.name for market in vm.markets">></select></span>
+                <span class="input-group-btn"><button class="btn btn-default" ng-click="vm.getInstrumentsOnMarket(vm.selectedMarket.marketCode)" type="button">Load!</button></span>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="vm.query" placeholder="Find instrument" ng-keyup="($event.which === 13 || $event.which === 32) && vm.getInstrumentsOnMarket()" >
+                <span class="input-group-btn"><button class="btn btn-default" ng-click="vm.getInstrumentsOnMarket()" type="button">Go!</button></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row panel panel-default">
+    <div class="col-sm-4 panel-body">
+        <table class="table table-hover table-condensed">
+                <thead>
+                <tr>
+                    <th>Instrument name</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="instrument in vm.instruments">
+                    <td><a ui-sref="instrument" ng-click="vm.setSelectedInstrument(instrument)">{{instrument[2]}}</a></td>
+                    <td></td>
+                    <td><submit class="btn btn-xs btn-success pull-right" ng-click="vm.buy(instrument)" ui-sref="portfolio">
+                        <span class="glyphicon glyphicon-plus"/> Buy</submit></td>
+                    <td><submit class="btn btn-xs btn-danger pull-right" ng-click="vm.sell(instrument)" ui-sref="portfolio">
+                        <span class="glyphicon glyphicon-minus"/> Sell</submit></td>
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-11"></div>
+                <div class="col-md-1"></div>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-8 panel-body">
+    </div>
+    </div>

@@ -1,0 +1,1 @@
+!function(){function n(n){function t(){}function o(){return n.getAccounts().then(function(n){return c.customers=n,console.log(c.accounts),c.accounts})}var c=this;c.customers=[],c.getCustomers=o,t()}angular.module("app.dashboard").controller("dashboard",n),n.$inject=["dataservice"]}();
