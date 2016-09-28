@@ -1,6 +1,4 @@
-/**
- * Created by Martin on 2015-09-06.
- */
+// Created by Martin on 2015-09-06.
 'use strict';
 
 var express = require('express');
@@ -14,7 +12,6 @@ console.log("Connected to database");
 
 var Portfolio = require('./server/models/portfolioModel');
 var Market = require('./server/models/marketModel');
-
 
 var app = express();
 

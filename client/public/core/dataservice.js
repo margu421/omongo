@@ -6,13 +6,11 @@
 (function() {
     'use strict';
 
-
     angular
         .module('app.core')
         .service('dataservice', dataservice);
 
-    //dataservice.$inject = [];
-
+    dataservice.$inject = ['$http'];
 
     function dataservice($http) {
         var ds = this;

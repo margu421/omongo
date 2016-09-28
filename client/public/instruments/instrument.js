@@ -28,7 +28,8 @@
         function getInstrument (instrumentkey) {
 
             console.log(instrumentkey);
-            $http.get('https://www.quandl.com/api/v3/datasets/' + instrumentkey + '.json?auth_token=HFk8WJ4U41zh3F5gscni').then(function (response) {
+            $http.get('https://www.quandl.com/api/v3/datasets/' + instrumentkey + 
+            '.json?auth_token=HFk8WJ4U41zh3F5gscni').then(function (response) {
                 vm.instrument = response.data;
                 console.log(vm.instrument);
                 extractClosingPrices(vm.instrument.dataset.data);

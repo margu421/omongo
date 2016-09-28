@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{defport node_modules}" />
-    <file url="PROJECT" libraries="{angular, angular-animate, angular-ui-router, bootstrap, bootstrap-toggle, exporting, highcharts, highcharts-3d, highcharts-more, jquery-1.11.3, jquery-2.1.4, standalone-framework, toastr, ui-bootstrap}" />
+    <file url="file://$PROJECT_DIR$" libraries="{omongo node_modules}" />
   </component>
 </project>
